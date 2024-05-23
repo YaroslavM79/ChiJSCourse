@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Calculator</h1>
+  <div class="calculator">
+    <input type="text" id="num1" placeholder="Number 1" class="display" oninput="updateData('num1', this.value)" onkeypress="validateNumber(event)">
+    <input type="text" id="num2" placeholder="Number 2" class="display" oninput="updateData('num2', this.value)" onkeypress="validateNumber(event)">
+    <input type="text" id="operation" placeholder="Operation (+, -, *, /)" class="display" oninput="updateData('operation', this.value)" onkeypress="validateOperation(event)">
+    <textarea id="history" placeholder="History" class="display" rows="5" readonly></textarea>
+    <button onclick="clearOperation()" class="orange">C</button>
+    <button onclick="inputOperation('/')">/</button>
+    <button onclick="inputOperation('*')">*</button>
+    <button onclick="inputOperation('-')">-</button>
+    <button onclick="inputDigit('7')">7</button>
+    <button onclick="inputDigit('8')">8</button>
+    <button onclick="inputDigit('9')">9</button>
+    <button onclick="inputOperation('+')" class="plus">+</button>
+    <button onclick="inputDigit('4')">4</button>
+    <button onclick="inputDigit('5')">5</button>
+    <button onclick="inputDigit('6')">6</button>
+    <button onclick="inputDigit('1')">1</button>
+    <button onclick="inputDigit('2')">2</button>
+    <button onclick="inputDigit('3')">3</button>
+    <button onclick="calculate()" class="plus orange">=</button>
+    <button onclick="inputDigit('0')" class="zero">0</button>
+    <button onclick="inputDigit(',')">,</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
