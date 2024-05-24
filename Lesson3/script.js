@@ -1,11 +1,21 @@
 const calculatorData = {
   num1: '',
   num2: '',
-  operation: ''
+  operation: '',
+  text_box: ''
 };
 
+function clearTextBox(){
+  calculatorData['text_box'] = '';
+}
+
 function updateData(field, value) {
+  console.log(field, value);
   calculatorData[field] = value;
+  if (field === 'num1' || field === 'num2') {
+    calculatorData['text_box'] = field;
+  }
+  console.log(calculatorData);
 }
 
 function clearOperation() {
@@ -18,6 +28,7 @@ function clearOperation() {
   const operationInput = document.getElementById('operation');
   operationInput.value = '';
   updateData('operation', '');
+  clearTextBox();
 }
 
 function calculate() {
@@ -35,6 +46,7 @@ function calculate() {
     showError("Cannot divide by zero.");
     return;
   }
+  clearTextBox();
 
   let result;
 
@@ -66,10 +78,18 @@ function showError(message) {
 }
 
 function inputDigit(digit) {
-  const focusedElement = document.activeElement;
-  if (focusedElement.id === 'num1' || focusedElement.id === 'num2') {
-    focusedElement.value += digit;
-    updateData(focusedElement.id, focusedElement.value);
+  if (calculatorData['text_box'] === 'num1') {
+    const num1 = document.getElementById('num1');
+    num1.value += digit;
+    updateData(num1.id, num1.value);
+    num1.focus()
+  }
+
+  if (calculatorData['text_box'] === 'num2') {
+    const num2 = document.getElementById('num2');
+    num2.value += digit;
+    updateData(num2.id, num2.value);
+    num2.focus()
   }
 }
 

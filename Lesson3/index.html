@@ -9,10 +9,10 @@
 <body>
     <h1>Calculator</h1>
     <div class="calculator">
-      <input type="text" id="num1" placeholder="Number 1" class="display" oninput="updateData('num1', this.value)" onkeypress="validateNumber(event)">
-      <input type="text" id="num2" placeholder="Number 2" class="display" oninput="updateData('num2', this.value)" onkeypress="validateNumber(event)">
-      <input type="text" id="operation" placeholder="Operation (+, -, *, /)" maxlength="2" class="display" oninput="updateOperation(this.value)" onkeypress="validateOperation(event)">
-      <textarea id="history" placeholder="History" class="display" rows="5" readonly></textarea>
+      <input type="text" id="num1" placeholder="Number 1" class="display" onfocus="updateData('num1', this.value)" oninput="updateData('num1', this.value)" onkeypress="validateNumber(event)">
+      <input type="text" id="num2" placeholder="Number 2" class="display" onfocus="updateData('num2', this.value)" oninput="updateData('num2', this.value)" onkeypress="validateNumber(event)">
+      <input type="text" id="operation" placeholder="Operation (+, -, *, /)" maxlength="2" class="display" onfocus="clearTextBox()" oninput="updateOperation(this.value)" onkeypress="validateOperation(event)">
+      <textarea id="history" placeholder="History" class="display" rows="5" onfocus="clearTextBox()" readonly></textarea>
       <button onclick="clearOperation()" class="orange">C</button>
       <button onclick="inputOperation('/')">/</button>
       <button onclick="inputOperation('*')">*</button>
