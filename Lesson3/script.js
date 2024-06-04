@@ -1,3 +1,5 @@
+const CACHED_KEY_NAME = "calculatorCachedData";
+
 const calculatorData = {
   num1: '',
   num2: '',
@@ -29,6 +31,20 @@ function clearOperation() {
   operationInput.value = '';
   updateData('operation', '');
   clearTextBox();
+  clearHistory();
+  clearCachedData();
+}
+
+function updateHistoryField(num1, num2, operation, result) {
+  const historyField = document.getElementById('history');
+  let text_operation = `${num1} ${operation} ${num2} = ${result}\n`;
+  historyField.value += text_operation;
+  updateCachedData(text_operation);
+}
+
+function clearHistory() {
+  const historyField = document.getElementById('history');
+  historyField.value = ""
 }
 
 function calculate() {
@@ -67,9 +83,7 @@ function calculate() {
       showError("Invalid operation.");
       return;
   }
-
-  const historyField = document.getElementById('history');
-  historyField.value += `${num1} ${operation} ${num2} = ${result}\n`;
+  updateHistoryField(num1, num2, operation, result);
 }
 
 function showError(message) {
@@ -109,3 +123,29 @@ function updateOperation(value) {
     updateData('operation', value);
   }
 }
+
+///--------------Cached operations
+function loadCachedData() {
+  const cachedData = localStorage.getItem(CACHED_KEY_NAME);
+  if (cachedData) {
+      document.getElementById('history').value = cachedData; 
+  }
+}
+
+function updateCachedData(fullOperation){
+  let cachedData = localStorage.getItem(CACHED_KEY_NAME);
+  if (cachedData) {
+    cachedData += fullOperation;
+  } else {
+    cachedData = fullOperation;
+  }
+  localStorage.setItem(CACHED_KEY_NAME, cachedData);
+}
+
+function clearCachedData()
+{
+  localStorage.removeItem(CACHED_KEY_NAME);
+}
+
+window.onload = loadCachedData;
+
