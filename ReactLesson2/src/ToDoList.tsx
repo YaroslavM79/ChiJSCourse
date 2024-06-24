@@ -75,7 +75,7 @@ interface Task {
                     onChange={() => this.toggleTaskCompletion(task.id)}
                 />
                 {task.text}
-                <button onClick={() => this.handleDeleteTask(task.id)}>Видалити</button>
+                <button onClick={() => this.handleDeleteTask(task.id)}>Delete</button>
             </div>
         ));
     }
