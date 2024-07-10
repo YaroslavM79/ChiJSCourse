@@ -1,3 +1,4 @@
+// src/components/BookDetail.tsx
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Book } from '../types/Book';
