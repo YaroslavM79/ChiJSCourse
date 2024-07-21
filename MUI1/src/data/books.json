@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Book Title 1",
+    "author": "Author 1",
+    "genre": "Genre 1",
+    "rating": 4.5,
+    "description": "Description 1",
+    "imageUrl": "https://www.lactame.com/github/image-js/image-js/3073b80c7d626196cb669f9d617f491a8338ca66/test/img/taxi/original.jpeg"
+  },
+  {
+    "id": 2,
+    "title": "Book Title 2",
+    "author": "Author 2",
+    "genre": "Genre 2",
+    "rating": 4.0,
+    "description": "Description 2",
+    "imageUrl": "https://www.lactame.com/github/image-js/image-js/3073b80c7d626196cb669f9d617f491a8338ca66/test/img/taxi/original.jpeg"
+  }
+  ,
+  {
+    "id": 3,
+    "title": "Book Title 3",
+    "author": "Author 3",
+    "genre": "Genre 3",
+    "rating": 4.0,
+    "description": "Description 3",
+    "imageUrl": "https://www.lactame.com/github/image-js/image-js/3073b80c7d626196cb669f9d617f491a8338ca66/test/img/taxi/original.jpeg"
+  }
+  ,
+  {
+    "id": 4,
+    "title": "Book Title 4",
+    "author": "Author 4",
+    "genre": "Genre 4",
+    "rating": 4.0,
+    "description": "Description 4",
+    "imageUrl": "https://www.lactame.com/github/image-js/image-js/3073b80c7d626196cb669f9d617f491a8338ca66/test/img/taxi/original.jpeg"
+  }
+  ,
+  {
+    "id": 5,
+    "title": "Book Title 5",
+    "author": "Author 5",
+    "genre": "Genre 5",
+    "rating": 4.0,
+    "description": "Description 5",
+    "imageUrl": "https://www.lactame.com/github/image-js/image-js/3073b80c7d626196cb669f9d617f491a8338ca66/test/img/taxi/original.jpeg"
+  }
+]
