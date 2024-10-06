@@ -1,0 +1,23 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "rating": 4.2,
+      "genre": "Fiction",
+      "description": "A novel set in the 1920s...",
+      "imageUrl": "https://www.lactame.com/github/image-js/image-js/3073b80c7d626196cb669f9d617f491a8338ca66/test/img/taxi/original.jpeg"
+    },
+    {
+      "id": 2,
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "rating": 4.5,
+      "genre": "Fiction",
+      "description": "A novel about racial injustice...",
+      "imageUrl": "https://www.lactame.com/github/image-js/image-js/3073b80c7d626196cb669f9d617f491a8338ca66/test/img/taxi/original.jpeg"
+    }
+  ]
+}
+
